@@ -42,6 +42,25 @@ class QueenSprite:
     def handle_click(self):
         self.y_velocity += -0.3   # Kick it up
 
+class DukeSprite:
+
+    def __init__(self, img, target_posn):
+        self.image = img
+        self.posn = target_posn
+
+    def update(self):
+        return
+
+    def draw(self, target_surface):
+        return
+
+    def handle_click(self):
+        return
+
+    def contains_point(self, pt):
+        # Use code from QueenSprite here
+        return
+
 def draw_board(the_board):
     """ Draw a chess board with queens, as determined by the the_board. """
 
