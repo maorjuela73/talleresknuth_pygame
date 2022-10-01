@@ -1,6 +1,6 @@
 import pygame
 
-gravity = 0.0001
+gravity = 0.1
 
 class QueenSprite:
 
@@ -75,6 +75,8 @@ class DukeSprite:
 
 def draw_board(the_board):
     """ Draw a chess board with queens, as determined by the the_board. """
+
+    my_clock = pygame.time.Clock()
 
     pygame.init()
     colors = [(255,0,0), (0,0,0)]    # Set up colors [red, black]
@@ -155,7 +157,7 @@ def draw_board(the_board):
             sprite.draw(surface)
 
         pygame.display.flip()
-
+        my_clock.tick(60)
 
     pygame.quit()
 
