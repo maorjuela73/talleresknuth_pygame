@@ -90,6 +90,17 @@ def draw_board(the_board):
                 (col*sq_sz+ball_offset, row*sq_sz+ball_offset))
         all_sprites.append(a_queen)
     
+    # Load the sprite sheet
+    duke_sprite_sheet = pygame.image.load("images/duke_spritesheet.png")
+
+    # Instantiate two duke instances, put them on the chessboard
+    duke1 = DukeSprite(duke_sprite_sheet,(sq_sz*2, 0))
+    duke2 = DukeSprite(duke_sprite_sheet,(sq_sz*5, sq_sz))
+
+    # Add them to the list of sprites which our game loop manages
+    all_sprites.append(duke1)
+    all_sprites.append(duke2)
+
     while True:
 
         # Look for an event from keyboard, mouse, etc.
